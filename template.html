@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/iconlogo.png" type="image/x-icon">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <!-- Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Image CSS -->
+    <link rel="stylesheet" href="assets/imghover/css/imagehover.min.css">
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Growthin</title>
+</head>
+<body>
+    <header class="sticky top-0 z-50 px-4 lg:px-28 py-3  lg:mt-4 w-full bg-white">
+        <div class="flex items-center gap-4 lg:gap-9">
+            <a href="index.html" class="btn-back hover:-translate-x-4 duration-300">
+                <i class="ri-arrow-left-line text-3xl"></i>
+            </a>
+            <img src="assets/img/Logo-header.png" width="" alt="Growthin" class=" hidden lg:block">
+            <img src="assets/img/Logo.png" alt="" class="lg:hidden">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol role="list" class="flex items-center space-x-4">           
+                <li>
+                    <div class="flex items-center">
+                    <a href="index.html" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Beranda</a>
+                    </div>
+                </li>
+            
+                <li>
+                    <div class="flex items-center">
+                    <!-- Heroicon name: solid/chevron-right -->
+                    <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <a href="template.html" class="ml-4 text-sm font-medium text-gray-900 hover:text-gray-700" aria-current="page">Template</a>
+                    </div>
+                </li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <main class="template lg:mt-16" id="template">
+        <section class="hero lg:px-28" id="hero">
+            <div class="contianer bg-indigo-400 text-white rounded-2xl">
+                <div class="flex flex-col lg:flex-row justify-between px-16 pt-16">
+                    <div class="data flex flex-col">
+                        <h2 class="font-bold">
+                            Growthin
+                        </h2>
+                        <h1 class="font-bold text-2xl  lg:text-4xl lg:mt-14 mt-4 mb-6 lg:mb-0">
+                            Pilih template,
+                            Edit sesukamu, <br> Publish
+                        </h1>
+                    </div>
+                    <img src="assets/img/hero-template.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="templates lg:px-28 px-4" id="templates">
+            <div class="container">
+                <div class="header mt-20 flex flex-col lg:flex-row justify-between">
+                    <h1 class="text-6xl font-bold text-gray-700">Pilih template</h1>
+                    <input type="text" class=" bg-gray-100 px-14 lg:w-2/4 w-full h-16 lg:h-auto rounded-xl bg-no-repeat mt-6 lg:mt-0" name="" id="" placeholder="Cari Template" style="background-image:url('assets/img/search.png'); background-position-y: center; background-position-x: 20px;">
+                </div>
+
+                <div class="template mt-11">
+                    <div class="grid lg:grid-cols-2 gap-6 lg:gap-32">
+                        <div class="col-span-1">
+                            <figure class="imghvr-slide-up bg-gray-50 ">
+                                <img src="assets/img/template-1.jpg" alt="example-image">
+                                <figcaption class="flex flex-col justify-center items-center text-center" style="background-color: #FAFAFA;">
+                                  <p class="font-bold text-xl lg:text-2xl text-black">Produk Templalte</p>
+                                  <p class="text-sm lg:text-md text-gray-500 max-w-xl mt-2 lg:mt-4">
+                                    Cocok digunakan untuk mendeskripsikan produk usaha anda dalam sebuah website, akan menambah daya tarik calon pembeli
+                                  </p>
+                                  <p class=" bg-indigo-500 w-2/3 font-bold py-4 rounded-xl mt-4 ">Gunakan</p>
+                                </figcaption>
+                                <a href="custom.html"></a>
+                            </figure>
+                            <div class="author flex gap-2 mt-4">
+                                <p class="font-bold">Food Product</p>
+                                <p>by <span class="underline">Topan</span></p>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <figure class="imghvr-slide-up bg-gray-50 ">
+                                <img src="assets/img/template-2.jpg" alt="example-image">
+                                <figcaption class="flex flex-col justify-center items-center text-center" style="background-color: #FAFAFA;">
+                                  <p class="font-bold text-xl lg:text-2xl text-black">Company Profile</p>
+                                  <p class="text-sm lg:text-md text-gray-500 max-w-xl mt-2 lg:mt-4">
+                                    Jelaskan profil usaha anda, keunikan, produk atau jasa yang anda tawarkan, dan semua yang berhubungan dengan usaha anda.
+                                  </p>
+                                  <p class=" bg-indigo-500 w-2/3 font-bold py-4 rounded-xl mt-4 ">Gunakan</p>
+                                </figcaption>
+                                <a href="custom.html"></a>
+                            </figure>
+                            <div class="author flex gap-2 mt-4">
+                                <p class="font-bold">Company Profile</p>
+                                <p>by <span class="underline">Topan</span></p>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <figure class="imghvr-slide-up bg-gray-50 ">
+                                <img src="assets/img/template-3.jpg" alt="example-image">
+                                <figcaption class="flex flex-col justify-center items-center text-center" style="background-color: #FAFAFA;">
+                                  <p class="font-bold text-xl lg:text-2xl text-black">Food Brand</p>
+                                  <p class="text-sm lg:text-md text-gray-500 max-w-xl mt-2 lg:mt-4">
+                                    Perlihatkan branding perusahaan F&B anda, anda juga bisa menambahkan daftar produk di template ini.
+                                  </p>
+                                  <p class=" bg-indigo-500 w-2/3 font-bold py-4 rounded-xl mt-4 ">Gunakan</p>
+                                </figcaption>
+                                <a href="custom.html"></a>
+                            </figure>
+                            <div class="author flex gap-2 mt-4">
+                                <p class="font-bold">Food Brand</p>
+                                <p>by <span class="underline">Topan</span></p>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <figure class="imghvr-slide-up bg-gray-50 ">
+                                <img src="assets/img/template-4.jpg" alt="example-image" >
+                                <figcaption class="flex flex-col justify-center items-center text-center" style="background-color: #FAFAFA;">
+                                  <p class="font-bold text-xl lg:text-2xl text-black">Produk Templalte</p>
+                                  <p class="text-sm lg:text-md text-gray-500 max-w-xl mt-2 lg:mt-4">
+                                    Cocok digunakan untuk mendeskripsikan produk usaha anda dalam sebuah website, akan menambah daya tarik calon pembeli
+                                  </p>
+                                  <p class=" bg-indigo-500 w-2/3 font-bold py-4 rounded-xl mt-4 ">Gunakan</p>
+                                </figcaption>
+                                <a href="custom.html"></a>
+                            </figure>
+                            <div class="author flex gap-2 mt-4">
+                                <p class="font-bold">Food Product</p>
+                                <p>by <span class="underline">Topan</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class=" lg:px-28 lg:pt-32 pb-6 bg-no-repeat bg-cover" style="background-image: url(/assets/img/bg-footer.png);" >
+        <div class="container ">
+            <div class="card bg-indigo-50 py-16 lg:px-16 px-4 rounded-3xl bg-no-repeat bg-right-bottom" style="background-image: url(assets/img/bg-footer.png);">
+                <img src="assets/img/logofooter.png" alt="">
+                <p class="text-gray-400">Kritik & Saran</p>
+                <form action="" method="post" class="flex items-center ">
+                    <input type="text" name="" id="" class="w-2/3 lg:w-2/4  h-10 lg:h-20  focus:outline-0 px-4 rounded-l-2xl">
+                    <button class=" bg-indigo-600 font-semibold hover:bg-indigo-700 text-white rounded-r-2xl lg:px-14 px-10 py-2 lg:py-7 -ml-8">Kirim</button>
+                </form>
+            </div>
+            <p class=" text-gray-400 mt-6 font-bold text-center">Copyright @2023. Orang Asik</p>
+        </div>
+    </footer>   
+</body>
+<script src="assets/js/main.js"></script>
+</html>

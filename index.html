@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/iconlogo.png" type="image/x-icon">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <!-- Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Image CSS -->
+    <link rel="stylesheet" href="assets/imghover/css/imagehover.min.css">
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Growthin</title>
+</head>
+<body>
+    <header class="fixed top-0 z-50 lg:px-28 lg:py-3 w-screen"  x-data="{ navOpen: false }" id="header">
+        <div class="lg:container flex justify-between gap-12 p-4 w-screen lg:pr-0" :class="navOpen ? 'bg-white' : ''">
+            <nav class="navbar flex lg:w-screen items-center flex-col lg:flex-row justify-between gap-4 lg:gap-0 " >
+                <div class="flex items-center">
+                    <button @click="navOpen = !navOpen" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden" aria-controls="mobile-menu" aria-expanded="false" >
+                        <span class="sr-only">Open main menu</span>
+                        <svg  class="block h-6 w-6 transition-opacity duration-500" :class="navOpen ? 'hidden' : 'block'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="h-6 w-6 transition-opacity duration-500" :class="navOpen ? 'block' : 'hidden'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+          
+                      </button>
+                    <div class="nav-brand flex items-center px-2 gap-2">
+                        <img src="assets/img/Logo.png" alt="" class="w-9">
+                        <h1 class="font-bold hidden text-lg lg:block">Growthin</h1>
+                    </div>
+                </div> 
+                <ul class="navbar-nav flex justify-between gap-4 lg:gap-12 flex-col lg:flex lg:flex-row" :class="navOpen ? 'block' : 'hidden'">
+                    <li class="nav-item">
+                        <a href="#hero" class="nav-link text-gray-400 hover:text-gray-700 ">
+                            Beranda
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#aboutus" class="nav-link text-gray-400 hover:text-gray-700 " >Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#template" class="nav-link text-gray-400 hover:text-gray-700 ">Template</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ourteam" class="nav-link text-gray-400 hover:text-gray-700 ">Tim Kita</a>
+                    </li>
+                </ul>
+                
+            </nav>
+            <a href="template.html" class="btn h-10  bg-indigo-500 hover:bg-indigo-800 px-12 text-white whitespace-nowrap flex items-center rounded-xl float-right hover:shadow-xl hover:shadow-indigo-200 duration-300">Mulai Buat</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero lg:py-48 py-28 bg-no-repeat bg-cover px-4" id="hero"  style="background-image: url('assets/img/hero-bgpng.png');" >
+            <div class="hero-header m-0 flex items-center flex-col text-center">
+                <h1 class="hero-title font-bold text-4xl lg:text-6xl max-w-7xl" >Mulai miliki microsite bisnis anda dengan template dari kami</h1>
+                <p class="hero-description lg:text-2xl text-md text-gray-400 mt-3">Buat microsite anda sendiri dengan Growthin</p>
+                <a href="template.html" class="bg-indigo-500 hover:bg-indigo-800 mt-6 py-3 px-32 font-semibold flex items-center text-white rounded-xl hover:shadow-xl hover:shadow-indigo-200 duration-300">Jelajahi</a>
+            </div>
+        </section>
+
+        <section class="about lg:mt-32 lg:px-28 "  >
+            <div class="px-4 flex items-center border-y-2 py-24 border-gray-400">
+                <div class="lg:grid lg:grid-cols-12 items-center justify-center">
+                    <div class="col-span-4">
+                        <h2 class="about-title text-6xl font-bold">Apa itu <br> Microsite?</h2>
+                    </div>
+                    <div class="col-span-8">
+                        <p class="about-description lg:text-2xl text-gray-500 lg:font-semibold tracking-wider mt-3 lg:mt-0">Microsite adalah <b class=" text-black">sebuah mini website</b> yang dibuat untuk tujuan bisnis tertentu. Biasanya, microsite digunakan untuk mempromosikan produk, mempublikasikan konten, atau menginformasikan event.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us mt-32 py-20 lg:px-28" id="aboutus" style="background: linear-gradient(113.92deg, rgba(24, 29, 74, 0.6) 0%, rgba(24, 29, 74, 0.396875) 40.08%, rgba(24, 29, 74, 0) 96.19%);">
+            <div class="wrapper px-4">
+                <div class="grid lg:grid-cols-12">
+                    <div class="aboutus-data col-span-6 text-white">
+                        <h2 class="lg:text-6xl text-4xl lg:font-bold">Tentang Growthin</h2>
+                        <p class=" max-w-2xl lg:mt-24 text-2xl mt-4 tracking-wider ">Dikembangkan untuk membangun ekonomi di Indonesia. Terutama mendukung para pelaku usaha Usaha Mikro Kecil dan Menengah agar sadar akan pentingnya pemasaran digitial di zaman yang serba cepat sekarang.</p>
+                    </div>
+                    <div class="col-span-6">
+                        <img src="assets/img/aboutus.png" alt="" class="aboutus-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="uvp  lg:px-28 bg-no-repeat bg-cover pb-12"  style="background-image: url('assets/img/bguvp.png');">
+            <div class="swiper uvpSwiper px-4">
+                <div class="swiper-wrapper" >
+                  <div class="swiper-slide rounded-2xl">
+                    <img src="assets/img/swiper1png.png" class="rounded-2xl" alt="">
+                  </div>
+                  <div class="swiper-slide rounded-2xl">
+                    <img src="assets/img/swiper2png.png" class="rounded-2xl" alt="">
+                  </div>
+                  <div class="swiper-slide rounded-3xl">
+                    <img src="assets/img/swiper3png.png" class="rounded-2xl" alt="">
+                  </div>
+                </div>
+                <div class="swipper-bottom flex items-center ">
+                    <div class="swiper-button-wrapper flex gap-2 flex-row">
+                        <div class="swiper-button-prev w-12 h-12 lg:w-20 lg:h-20">
+                            <svg class="text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                              </svg>                      
+                        </div>
+                        <div class="swiper-button-next w-12 h-12 lg:w-20 lg:h-20">
+                            <svg class="text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination 2xl:hidden"></div>
+                </div>
+              </div>
+              <div class="wrapper px-4 counter-section" id="counterSection">
+                <div class="flex flex-wrap lg:-mt-52 justify-center lg:justify-between gap-12 lg:gap-0">
+                    <div class="items flex flex-col items-center gap-6">
+                        <div class="flex">
+                            <h4 class="font-bold text-7xl counter" data-target="100">
+                                0
+                            </h4>
+                            <h4 class="font-bold text-7xl">
+                                K
+                            </h4>
+                        </div>
+                        <p class="text-gray-400 text-center text-2xl">Pengusaha sudah <br> membuat situs</p>
+                    </div>
+                    <div class="items flex flex-col items-center gap-6"> 
+                        <div class="flex">
+                            <h4 class="font-bold text-7xl counter" data-target="24">
+                                0
+                            </h4>
+                            <h4 class="font-bold text-7xl">
+                                /
+                            </h4>
+                            <h4 class="font-bold text-7xl counter" data-target="7">
+                                0
+                            </h4>
+                        </div>
+                        <p class=" text-gray-400 text-center text-2xl">Akses masuk ke <br> situs mikro</p>
+                    </div>
+                    <div class="items flex flex-col items-center gap-6">
+                        <div class="flex">
+                            <h4 class="font-bold text-7xl counter" data-target="2">
+                                0
+                            </h4>
+                            <h4 class="font-bold text-7xl">
+                                M+
+                            </h4>
+                        </div>
+                        <p class="text-gray-400 text-center text-2xl">Orang pengakses <br> situs mikro</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonis lg:mt-32">
+            <div class="wrapper lg:px-28 px-4 mb-20 lg:mb-0">
+                <h1 class="testimoni-title text-3xl lg:text-6xl text-start lg:mb-20 max-w-5xl">Kata mereka setelah menggunakan Growthin</h1>
+            </div>
+            <div class="swiper testiSwiper bg-indigo-400 flex py-20 lg:px-32 px-4 items-center">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide rounded-xl bg-no-repeat bg-contain lg:px-28 px-4 py-16 lg:hover:scale-110 duration-300" style="background-image: url('assets/img/testi-bg.png');">
+                    <div class="testimoni flex flex-col justify-center items-center md:flex-row gap-12">
+                        <img class=" " src="assets/img/testi1.png" alt="">
+                        <div class="data">
+                            <div class="name flex flex-col lg:flex-row items-center">
+                                <hr class="w-16">
+                                <h4 class="lg:ml-4 text-gray-500 text-2xl">Ica, Head Marketing of Krawuin</h4>
+                            </div>
+                            <p class="text-2xl mt-5 text-center lg:text-start">“Growthin membantu kami mengenalkan produk kami lebih luas”</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide rounded-xl bg-no-repeat bg-contain lg:px-28 px-4 py-16 lg:hover:scale-110 duration-300" style="background-image: url('assets/img/testi-bg.png');">
+                    <div class="testimoni flex flex-col justify-center items-center md:flex-row gap-12">
+                        <img class=" " src="assets/img/testi2.png" alt="">
+                        <div class="data">
+                            <div class="name flex flex-col lg:flex-row items-center">
+                                <hr class="w-16">
+                                <h4 class="lg:ml-4 text-gray-500 text-2xl">Bubu, Founder of Ayambox</h4>
+                            </div>
+                            <p class="text-2xl mt-5 text-center lg:text-start">“Tim marketing kami dapat kemudahan untuk memasarkan produk melalui microsite”</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide rounded-xl bg-no-repeat bg-contain lg:px-28 px-4 py-16 lg:hover:scale-110 duration-300" style="background-image: url('assets/img/testi-bg.png');">
+                    <div class="testimoni flex flex-col justify-center items-center md:flex-row gap-12">
+                        <img class=" " src="assets/img/testi3.png" alt="">
+                        <div class="data">
+                            <div class="name flex flex-col lg:flex-row items-center">
+                                <hr class="w-16">
+                                <h4 class="lg:ml-4 text-gray-500 text-2xl">Bison, Founder of Krupuk balap</h4>
+                            </div>
+                            <p class="text-2xl mt-5 text-center lg:text-start">“Calon konsumen dapat melihat deskripsi singkat produk kami pada situs mikro”</p>
+                        </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="swipper-bottom flex items-center ">
+                    <div class="swiper-button-wrapper flex gap-2 flex-row">
+                        <div class="swiper-button-wrapper flex gap-2 flex-row">
+                            <div class="swiper-button-prev w-12 h-12 lg:w-20 lg:h-20">
+                                <svg class="text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                                  </svg>                      
+                            </div>
+                            <div class="swiper-button-next w-12 h-12 lg:w-20 lg:h-20">
+                                <svg class="text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination 2xl:hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="template lg:px-28 mt-32 px-4" id="template">
+            <div class="container">
+                <div class="template-header flex justify-between items-center">
+                    <h1 class=" max-w-5xl text-4xl lg:text-6xl ">Pilih template dan buat situs mikro sekarang</h1>
+                    <a href="template.html" class="btn-template bg-indigo-500 text-white flex items-center font-bold px-4 h-16 rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="currentColor" class="w-10 h-10 duration-300 svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                          </svg>
+                          
+                    </a>
+                </div>
+                <div class="template-wrapper lg:mt-20 mt-4">
+                    <div class="swiper templateSwiper flex py-20 lg:px-32 px-4 items-center">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <figure class="imghvr-slide-up bg-gray-50 ">
+                                <img src="assets/img/template-1.jpg" alt="example-image">
+                                <figcaption class="flex flex-col justify-center items-center" style="background-color: #FAFAFA;">
+                                  <p class="font-bold text-xl text-black">Produk Templalte</p>
+                                  <p class="text-sm text-gray-500">
+                                    Cocok digunakan untuk mendeskripsikan produk usaha anda dalam sebuah website, akan menambah daya tarik calon pembeli
+                                  </p>
+                                  <p class=" bg-indigo-500 w-2/3 font-bold py-4 rounded-xl mt-4 ">Gunakan</p>
+                                </figcaption>
+                                <a href="custom.html"></a>
+                              </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="imghvr-slide-up bg-gray-50 ">
+                                <img src="assets/img/template-2.jpg" alt="example-image">
+                                <figcaption class="flex flex-col justify-center items-center" style="background-color: #FAFAFA;">
+                                  <p class="font-bold text-xl text-black">Company Profile</p>
+                                  <p class="text-sm text-gray-500">
+                                    Cocok untuk digunakan untuk mendeskripsikan perusahaan anda dalam sebuah website moderen
+                                  </p>
+                                  <p class=" bg-indigo-500 w-2/3 font-bold py-4 rounded-xl mt-4 ">Gunakan</p>
+                                </figcaption>
+                                <a href="custom.html"></a>
+                              </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="imghvr-slide-up bg-gray-50 ">
+                                <img src="assets/img/template-3.jpg" alt="example-image">
+                                <figcaption class="flex flex-col justify-center items-center" style="background-color: #FAFAFA;">
+                                  <p class="font-bold text-xl text-black">Produk Templalte</p>
+                                  <p class="text-sm text-gray-500">
+                                    Cocok digunakan untuk mendeskripsikan produk usaha anda dalam sebuah website, akan menambah daya tarik calon pembeli
+                                  </p>
+                                  <p class=" bg-indigo-500 w-2/3 font-bold py-4 rounded-xl mt-4 ">Gunakan</p>
+                                </figcaption>
+                                <a href="custom.html"></a>
+                              </figure>
+                          </div>
+        
+                        </div>
+                        <div class="swipper-bottom flex items-center ">
+                            <div class="swiper-button-wrapper flex gap-2 flex-row">
+                                <div class="swiper-button-wrapper flex gap-2 flex-row">
+                                    <div class="swiper-button-prev w-12 h-12 lg:w-20 lg:h-20">
+                                        <svg class="text-white" xmlns="http://www.w3.org/2000/svg" fill="#6366F1" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6366F1" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                                          </svg>                      
+                                    </div>
+                                    <div class="swiper-button-next w-12 h-12 lg:w-20 lg:h-20">
+                                        <svg class="text-white" xmlns="http://www.w3.org/2000/svg" fill="#6366F1" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6366F1" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination 2xl:hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team mt-32 lg:px-28 bg-no-repeat bg-cover" id="ourteam" style="background-image: url(assets/img/bg-team.png);">
+            <div class="team-title text-center">
+                <h1 class="text-6xl font-bold text-gray-800">The Team</h1>
+                <p class=" text-gray-500 mt-4 font-semibold text-2xl">Tim Orang Asik</p>
+            </div>
+            <div class="wrapper lgl:mt-28 mt-16 flex flex-col lg:gap-28 gap-0">
+                <div class="item lg:relative lg:block flex flex-col items-center">
+                    <img src="assets/img/novan.png" alt="" width="350" class="team-foto lg:absolute left-12 bottom-0 -mb-12 lg:mb-0 z-10">
+                    <div class="card-team grid lg:grid-cols-12 items-center bg-gray-500 py-24 px-4 lg:py-0 lg:px-0 " style="border-radius: 150px 30px 30px 30px;">
+                        <div class="col-span-5 flex">
+                            <img src="assets/img/bg-novan.png" class=" hidden lg:block" alt="" style="border-radius: 150px 30px 30px 30px;">
+                        </div>
+                        <div class="col-span-7 text-white flex items-center flex-col text-center lg:block lg:text-start">
+                            <h1 class="text-3xl lg:text-6xl font-bold">
+                                Rikzy Novan Aditiya
+                            </h1>
+                            <p class=" text-2xl">
+                                Siswa kelas XII | SMK Telkom Sidoarjo <span class="font-bold">as Developer</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item lg:relative lg:block flex flex-col items-center">
+                    <img src="assets/img/taufiq.png" alt="" width="350" class="team-foto lg:absolute left-12 bottom-0 -mb-12 lg:mb-0 z-10">
+                    <div class="card-team grid lg:grid-cols-12 items-center bg-gray-500 py-24 px-4 lg:py-0 lg:px-0 " style="border-radius: 150px 30px 30px 30px;">
+                        <div class="col-span-5 flex">
+                            <img src="assets/img/bg-taufiq.png" class=" hidden lg:block" alt="" style="border-radius: 150px 30px 30px 30px;">
+                        </div>
+                        <div class="col-span-7 text-white flex items-center flex-col text-center lg:block lg:text-start">
+                            <h1 class="text-3xl lg:text-6xl font-bold">
+                                M Taufiqurahman T
+                            </h1>
+                            <p class=" text-2xl">
+                                Siswa kelas XII | SMK Telkom Sidoarjo <span class="font-bold">as UI Designer</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class=" lg:px-28 lg:pt-32 pb-6 bg-no-repeat bg-cover" style="background-image: url(/assets/img/bg-footer.png);" >
+        <div class="container ">
+            <div class="card bg-indigo-50 py-16 lg:px-16 px-4 rounded-3xl bg-no-repeat bg-right-bottom" style="background-image: url(assets/img/bg-footer.png);">
+                <img src="assets/img/logofooter.png" alt="">
+                <p class="text-gray-400">Kritik & Saran</p>
+                <form action="" method="post" class="flex items-center ">
+                    <input type="text" name="" id="" class="w-2/3 lg:w-2/4  h-10 lg:h-20  focus:outline-0 px-4 rounded-l-2xl">
+                    <button class=" bg-indigo-600 font-semibold hover:bg-indigo-700 text-white rounded-r-2xl lg:px-14 px-10 py-2 lg:py-7 -ml-8">Kirim</button>
+                </form>
+            </div>
+            <p class=" text-gray-400 mt-6 font-bold text-center">Copyright @2023. Orang Asik</p>
+        </div>
+    </footer>   
+</body>
+<script src="assets/js/main.js"></script>
+
+
+</html>

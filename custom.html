@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/iconlogo.png" type="image/x-icon">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <!-- Alpine JS -->
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Image CSS -->
+    <link rel="stylesheet" href="assets/imghover/css/imagehover.min.css">
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Growthin</title>
+</head>
+<body>
+    <header class="sticky top-0 z-50 px-4 lg:px-28 py-3  lg:mt-4 w-full bg-white">
+        <div class="flex items-center gap-4 lg:gap-9">
+            <a href="template.html" class="btn-back hover:-translate-x-4 duration-300">
+                <i class="ri-arrow-left-line text-3xl"></i>
+            </a>
+            <img src="assets/img/Logo-header.png" width="" alt="Growthin" class=" hidden lg:block">
+            <img src="assets/img/Logo.png" alt="" class="lg:hidden">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol role="list" class="flex items-center space-x-4">           
+                <li>
+                    <div class="flex items-center">
+                    <a href="index.html" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Beranda</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                      <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    <a href="template.html" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Template</a>
+                    </div>
+                </li>
+            
+                <li>
+                    <div class="flex items-center">
+                    <!-- Heroicon name: solid/chevron-right -->
+                    <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <a href="#" class="ml-4 text-sm font-medium text-gray-900 hover:text-gray-700" aria-current="page">Custom</a>
+                    </div>
+                </li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <main class="custom px-4 lg:px-28 grid grid-cols-2 lg:mt-20 gap-20" id="custom">
+        <section class="custom-section col-span-1">
+            <div class="tautan">
+                <label for="tautan"><b>Tautan Website</b></label>
+                <div class="grid grid-cols-3 mt-3">
+                    <input type="text" class=" col-span-1 rounded-l-xl bg-gray-200 placeholder:text-indigo-600 placeholder:text-xl p-4 text-center placeholder:py-2 placeholder:bg-white border-2 border-gray-400 border-r-0" disabled placeholder="growthin.in/">
+                    <input type="text" class="col-span-2 rounded-r-xl px-4 pl-0 bg-gray-200 focus:outline-none border-2 border-gray-400 border-l-0">
+                </div>
+                <div class="text-sm text-gray-400">*Tautan tidak boleh menggunakan spasi</div>
+            </div>
+            <div class="components mt-12">
+                <p><b>Komponen</b></p>
+                <div class="component-wrapper mt-3 flex flex-col gap-6">
+                    <div class="component" x-data="{ customOpen: false }">
+                        <div class="flex items-center" >
+                            <button @click="customOpen = !customOpen" type="button" :class="customOpen ? 'bg-indigo-600' : 'bg-gray-200'" class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" role="switch" aria-checked="false" aria-labelledby="annual-billing-label">
+                              <span aria-hidden="true" :class="customOpen ? 'translate-x-5' : 'translate-x-0' " class="translate-x-0 pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"></span>
+                            </button>
+                            <span class="ml-3" id="title-label">
+                              <h2 class="text-md font-medium text-gray-900">Bagian Utama</h2>
+                            </span>
+                        </div>
+                        <div class="customizing mt-3" x-show="customOpen">
+                            <div class=" flex flex-col gap-4">
+                                <fieldset>
+                                  <legend class="block text-sm font-medium text-gray-700"><b>Judul</b></legend>
+                                  <div class="mt-1 bg-white rounded-md shadow-sm -space-y-px">
+                                    <div>
+                                      <label for="judul" class="sr-only">Judul</label>
+                                      <input type="text" name="judul" id="judul" class="focus:ring-indigo-500 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300 p-4" placeholder="Asikin Coffe">
+                                    </div>
+                                    <div class="flex -space-x-px">
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-weight" class="sr-only">Ketebalan Font</label>
+                                        <select id="font-weight" name="font-weight" autocomplete="font-weight-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Bold</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-size" class="sr-only">Ukuran Font</label>
+                                        <select id="font-size" name="font-size" autocomplete="font-size-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Extra Large</option>
+                                          <option>Large</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset>
+                                  <legend class="block text-sm font-medium text-gray-700"><b>Sub Judul</b></legend>
+                                  <div class="mt-1 bg-white rounded-md shadow-sm -space-y-px">
+                                    <div>
+                                      <label for="sub-judul" class="sr-only">Sub Judul</label>
+                                      <input type="text" name="sub-judul" id="sub-judul" class="focus:ring-indigo-500 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300 p-4" placeholder="Enjoy Your Days With">
+                                    </div>
+                                    <div class="flex -space-x-px">
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-weight" class="sr-only">Ketebalan Font</label>
+                                        <select id="font-weight" name="font-weight" autocomplete="font-weight-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Bold</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-size" class="sr-only">Ukuran Font</label>
+                                        <select id="font-size" name="font-size" autocomplete="font-size-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Extra Large</option>
+                                          <option>Large</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset>
+                                  <legend class="block text-sm font-medium text-gray-700"><b>Tagline</b></legend>
+                                  <div class="mt-1 bg-white rounded-md shadow-sm -space-y-px">
+                                    <div>
+                                      <label for="tagline" class="sr-only">Tagline</label>
+                                      <input type="text" name="tagline" id="tagline" class="focus:ring-indigo-500 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300 p-4" placeholder="#1 Cafe di Nganjuk">
+                                    </div>
+                                    <div class="flex -space-x-px">
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-weight" class="sr-only">Ketebalan Font</label>
+                                        <select id="font-weight" name="font-weight" autocomplete="font-weight-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Bold</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-size" class="sr-only">Ukuran Font</label>
+                                        <select id="font-size" name="font-size" autocomplete="font-size-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Extra Large</option>
+                                          <option>Large</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset class="flex flex-col">
+                                    <legend class="block text-sm font-medium text-gray-700 mb-3"><b>Foto Produk</b></legend>
+                                    <input type="file" name="image" id="image" class=" file:bg-indigo-400 file:border-none file:text-white file:p-2 file:rounded-lg">
+                                </fieldset>
+                              </div>
+                              
+                        </div>
+                    </div>
+                    <div class="component" x-data="{ customOpen: false }">
+                        <div class="flex items-center" >
+                            <button @click="customOpen = !customOpen" type="button" :class="customOpen ? 'bg-indigo-600' : 'bg-gray-200'" class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" role="switch" aria-checked="false" aria-labelledby="annual-billing-label">
+                              <span aria-hidden="true" :class="customOpen ? 'translate-x-5' : 'translate-x-0' " class="translate-x-0 pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"></span>
+                            </button>
+                            <span class="ml-3" id="title-label">
+                              <h2 class="text-md font-medium text-gray-900">Sosial Media</h2>
+                            </span>
+                        </div>
+                        <div class="customizing mt-3 flex flex-col gap-3" x-show="customOpen">
+                            <div>
+                                <label for="instagram" class="text-sm font-medium text-gray-700 flex items-center gap-3">Instagram</label>
+                                <div class="mt-1 flex rounded-md shadow-sm">
+                                  <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm"> http://instagram.com/ </span>
+                                  <input type="text" name="instagram" id="instagram" class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-md focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 border-2" placeholder="rzkynovan">
+                                </div>
+                            </div>
+                            <div>
+                              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                              <div class="mt-1 relative rounded-md shadow-sm">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                  <!-- Heroicon name: solid/mail -->
+                                  <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                  </svg>
+                                </div>
+                                <input type="email" name="email" id="email" class="focus:ring-indigo-500 p-2 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md" placeholder="you@example.com">
+                              </div>
+                            </div>                               
+                        </div>
+                    </div>
+                    <div class="component" x-data="{ customOpen: true }">
+                        <div class="flex items-center" >
+                            <button @click="customOpen = !customOpen" type="button" :class="customOpen ? 'bg-indigo-600' : 'bg-gray-200'" class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" role="switch" aria-checked="false" aria-labelledby="annual-billing-label">
+                              <span aria-hidden="true" :class="customOpen ? 'translate-x-5' : 'translate-x-0' " class="translate-x-0 pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"></span>
+                            </button>
+                            <span class="ml-3" id="title-label">
+                              <h2 class="text-md font-medium text-gray-900">Testimoni</h2>
+                            </span>
+                        </div>
+                        <div class="customizing mt-3" x-show="customOpen">
+                            <div>
+                                <fieldset>
+                                  <legend class="block text-sm font-medium text-gray-700">Foto</legend>
+                                  <div class="mt-1 bg-white rounded-md shadow-sm -space-y-px">
+                                    <div>
+                                      <label for="foto" class="sr-only">Foto</label>
+                                      <input type="file" name="image" id="image" class=" file:bg-indigo-400 file:border-none file:text-white file:p-2 file:rounded-lg">
+                                    </div>
+                                    <div>
+                                      <legend class="mt-4 block text-sm font-medium text-gray-700">Nama</legend>
+                                      <div class="mt-1 bg-white rounded-md shadow-sm -space-y-px">
+                                        <div>
+                                          <label for="nama-testiomoni" class="sr-only">Nama</label>
+                                          <input type="text" name="nama-testiomoni" id="nama-testiomoni" class="focus:ring-indigo-500 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300 p-4" placeholder="Asikin Coffe">
+                                        </div>
+                                    </div>
+                                    <div>
+                                      <legend class="mt-4 block text-sm font-medium text-gray-700">Pesan</legend>
+                                      <div class="mt-1 bg-white rounded-md shadow-sm -space-y-px">
+                                        <div>
+                                          <label for="pesan-testiomoni" class="sr-only">Pesan</label>
+                                          <textarea name="pesan-testiomoni" id="pesan-testiomoni" cols="70" rows="5" class=" w-full border"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="flex -space-x-px">
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-weight" class="sr-only">Ketebalan Font</label>
+                                        <select id="font-weight" name="font-weight" autocomplete="font-weight-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Bold</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-size" class="sr-only">Ukuran Font</label>
+                                        <select id="font-size" name="font-size" autocomplete="font-size-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Extra Large</option>
+                                          <option>Large</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                              
+                        </div>
+                    </div>
+                    <div class="component" x-data="{ customOpen: false }">
+                        <div class="flex items-center" >
+                            <button @click="customOpen = !customOpen" type="button" :class="customOpen ? 'bg-indigo-600' : 'bg-gray-200'" class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" role="switch" aria-checked="false" aria-labelledby="annual-billing-label">
+                              <span aria-hidden="true" :class="customOpen ? 'translate-x-5' : 'translate-x-0' " class="translate-x-0 pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"></span>
+                            </button>
+                            <span class="ml-3" id="title-label">
+                              <h2 class="text-md font-medium text-gray-900">Kontak</h2>
+                            </span>
+                        </div>
+                        <div class="customizing mt-3" x-show="customOpen">
+                            <div>
+                                <fieldset>
+                                  <legend class="block text-sm font-medium text-gray-700">Judul</legend>
+                                  <div class="mt-1 bg-white rounded-md shadow-sm -space-y-px">
+                                    <div>
+                                      <label for="card-number" class="sr-only">Judul</label>
+                                      <input type="text" name="card-number" id="card-number" class="focus:ring-indigo-500 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300 p-4" placeholder="Asikin Coffe">
+                                    </div>
+                                    <div class="flex -space-x-px">
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-weight" class="sr-only">Ketebalan Font</label>
+                                        <select id="font-weight" name="font-weight" autocomplete="font-weight-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Bold</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-size" class="sr-only">Ukuran Font</label>
+                                        <select id="font-size" name="font-size" autocomplete="font-size-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Extra Large</option>
+                                          <option>Large</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                              
+                        </div>
+                    </div>
+                    <div class="component" 
+                    x-data="{ customOpen: false }">
+                        <div class="flex items-center" >
+                            <button @click="customOpen = !customOpen" type="button" :class="customOpen ? 'bg-indigo-600' : 'bg-gray-200'" class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" role="switch" aria-checked="false" aria-labelledby="annual-billing-label">
+                              <span aria-hidden="true" :class="customOpen ? 'translate-x-5' : 'translate-x-0' " class="translate-x-0 pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"></span>
+                            </button>
+                            <span class="ml-3" id="title-label">
+                              <h2 class="text-md font-medium text-gray-900">Footer</h2>
+                            </span>
+                        </div>
+                        <div class="customizing mt-3" x-show="customOpen">
+                            <div>
+                                <fieldset>
+                                  <legend class="block text-sm font-medium text-gray-700">Judul</legend>
+                                  <div class="mt-1 bg-white rounded-md shadow-sm -space-y-px">
+                                    <div>
+                                      <label for="card-number" class="sr-only">Judul</label>
+                                      <input type="text" name="card-number" id="card-number" class="focus:ring-indigo-500 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300 p-4" placeholder="Asikin Coffe">
+                                    </div>
+                                    <div class="flex -space-x-px">
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-weight" class="sr-only">Ketebalan Font</label>
+                                        <select id="font-weight" name="font-weight" autocomplete="font-weight-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Bold</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+                                      <div class="w-1/2 flex-1 min-w-0">
+                                        <label for="font-size" class="sr-only">Ukuran Font</label>
+                                        <select id="font-size" name="font-size" autocomplete="font-size-name" class="focus:ring-indigo-500 p-3 focus:border-indigo-500 relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-gray-300">
+                                          <option>Extra Large</option>
+                                          <option>Large</option>
+                                          <option>Medium</option>
+                                          <option>Normal</option>
+                                        </select>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="http://rzky.codes/template-1" target="_blank" class="bg-indigo-500 p-4 px-8 text-white font-semibold rounded-xl mt-12 hover:bg-indigo-200 duration-300 block items-center text-center">Publish</a>
+        </section>
+        <section class="preview col-span-1">
+          <img src="assets/img/preview-template.jpg" alt="">
+        </section>
+    </main>
+
+    <!-- <footer class=" lg:px-28 lg:pt-32 pb-6 bg-no-repeat bg-cover" style="background-image: url(/assets/img/bg-footer.png);" >
+        <div class="container ">
+            <div class="card bg-indigo-50 py-16 lg:px-16 px-4 rounded-3xl bg-no-repeat bg-right-bottom" style="background-image: url(assets/img/bg-footer.png);">
+                <img src="assets/img/logofooter.png" alt="">
+                <p class="text-gray-400">Kritik & Saran</p>
+                <form action="" method="post" class="flex items-center ">
+                    <input type="text" name="" id="" class="w-2/3 lg:w-2/4  h-10 lg:h-20  focus:outline-0 px-4 rounded-l-2xl">
+                    <button class=" bg-indigo-600 font-semibold hover:bg-indigo-700 text-white rounded-r-2xl lg:px-14 px-10 py-2 lg:py-7 -ml-8">Kirim</button>
+                </form>
+            </div>
+            <p class=" text-gray-400 mt-6 font-bold text-center">Copyright @2023. Orang Asik</p>
+        </div>
+    </footer>    -->
+</body>
+<script src="assets/js/main.js"></script>
+</html>
